@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Total Marks</th>
+            <th>Obtained Marks</th>
+            <th>Percentage</th>
+        </tr>
+        <!-- user se jo subject get kia tha usko is tr ma set karna ha id ki help se  -->
+        <tr>
+            <td id="one"></td>
+            <td id="total1"></td>
+            <td id="ob1"></td>
+            <td id="per1"></td>
+            <td></td>
+        </tr>
+        <!-- total marks jo hein usko is tr ma set karna ha class ki help se -->
+        <tr>
+            <td id="two"></td>
+            <td id="total2"></td>
+            <td id="ob2"></td>
+            <td id="per2"></td>
+        </tr>
+        <tr>
+            <td id="three"></td>
+            <td id="total3"></td>
+            <td id="ob3"></td>
+            <td id="per3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <th id="markPlus"></th>
+            <th id="obtainPlus"></th>
+            <th id="pp"></th>
+        </tr>
+
+    </table>
+    
+
+    <script>
+           // task 6 part A
+                var subName1 = prompt("Please enter First Subject Name: ");
+                var subName2 = prompt("Please enter Second Subject Name: ");
+                var subName3 = prompt("Please enter third Subject Name: ");
+           // task 6 part b     
+                var totalMarks = 100;
+            // task 6 part c 
+            var num1 = +prompt("Please enter Obtained Mark First Subject: ");
+            // task 6 Part D
+            var num2 = +prompt("Please enter Obtained Mark second Subject : ");
+            var num3 = +prompt("Please enter Obtained Mark third Subject : ");
+
+                document.getElementById("one").innerHTML = subName1;
+                document.getElementById("two").innerHTML = subName2;
+                document.getElementById("three").innerHTML = subName3;
+
+                // total marks to table ma set kar rahe hein ID ki throug
+                document.getElementById("total1").innerHTML = totalMarks;
+                document.getElementById("total2").innerHTML = totalMarks;
+                document.getElementById("total3").innerHTML = totalMarks;
+
+                document.getElementById("ob1"). innerHTML = num1;
+                document.getElementById("ob2"). innerHTML = num2;
+                document.getElementById("ob3"). innerHTML = num3;
+
+
+                // percentage here 
+                var percentage1 = (num1 / totalMarks)* 100
+                var percentage2 = (num2 / totalMarks)* 100
+                var percentage3 = (num3 / totalMarks)* 100
+                
+
+                document.getElementById("per1").innerHTML = percentage1 +"%";
+                document.getElementById("per2").innerHTML = percentage2 +"%";
+                document.getElementById("per3").innerHTML = percentage3 +"%";
+
+
+                // total marks Plus
+                document.getElementById("markPlus").innerHTML = totalMarks +totalMarks+totalMarks;
+                // obtained marks plus
+                document.getElementById("obtainPlus").innerHTML = num1+num2+num3;
+
+                //percentage get 
+                var tt = totalMarks+totalMarks+totalMarks
+                var nn = num1+num2+num3
+                var pp = (nn / tt) *100
+                document.getElementById("pp").innerHTML = pp + "%";
+    </script>
+    <script src="math.js"></script>
+    <script src="greet.js"></script> 
+
+</body>
+
+</html>
